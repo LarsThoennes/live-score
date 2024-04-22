@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.game-minute {
+  position: absolute;
+  right: 32px;
+  top: 16px;
+}
+
+.green-timer {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  height: 14px;
+  width: 14px;
+  background-color: green;
+  border-radius: 100%;
+  animation: timer-puls 1.4s infinite;
+}
+
+.orange-timer {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  height: 14px;
+  width: 14px;
+  background-color: orange;
+  border-radius: 100%;
+}
+
+.red-timer {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  height: 14px;
+  width: 14px;
+  background-color: red;
+  border-radius: 100%;
+}
+
+
+
+@keyframes timer-puls {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.no-current-games-card-container {
+  display: flex;
+  justify-content: center;
+
+  .no-current-games-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    font-size: 16px;
+  }
+}

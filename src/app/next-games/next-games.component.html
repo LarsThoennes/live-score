@@ -1,0 +1,32 @@
+<div class="body-container">
+  <h1 class="component-h1">{{footballMatches.length}} Live Games</h1>
+  <div class="match-status-info">
+    <div class="playtime-info">playtime</div>
+    <div class="break-info">break</div>
+    <div class="end-info">end</div>
+  </div>
+  <div class="box-container">
+    <div class="no-current-games-card-container" *ngIf="footballMatches.length === 0">
+      <mat-card class="no-current-games-card">
+        There are currently no live games.
+      </mat-card>
+    </div>
+    <mat-card *ngFor="let match of footballMatches" role="list" class="game-card">
+      <mat-card-header>
+        <mat-card-title>
+          <h1>{{ match.homeTeam }}
+            <ng-container *ngIf="match.score !== '? - ?' && match.score !== '0 - 0'">{{ match.score }}</ng-container>
+            <ng-container *ngIf="match.score === '? - ?' || match.score === '0 - 0'">0 - 0</ng-container>
+          {{ match.awayTeam }}</h1>
+          <div class="green-timer" *ngIf="match.status === 'IN PLAY' || match.status === 'ADDED TIME'"></div>
+          <div class="orange-timer" *ngIf="match.status === 'HALF TIME BREAK'"></div>
+          <div class="red-timer" *ngIf="match.status === 'FINISHED'"></div>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p *ngIf="match.location && match.location !== '--'">Location: {{ match.location }}</p>
+        <p>Starttime: {{ match.scheduled }} local time</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

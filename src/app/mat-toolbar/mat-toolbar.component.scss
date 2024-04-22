@@ -1,0 +1,29 @@
+mat-toolbar {
+  gap: 20px;
+
+  .match-status-info {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 16px;
+    top: 70px;
+    gap: 8px;
+    font-size: 16px;
+
+    .playtime-info {
+      border-top: 4px solid green;
+      width: 80px;
+    }
+
+    .break-info {
+      border-top: 4px solid orange;
+      width: 80px;
+    }
+
+    .end-info {
+      border-top: 4px solid red;
+      width: 80px;
+    }
+  }
+
+}

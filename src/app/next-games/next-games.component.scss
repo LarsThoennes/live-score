@@ -1,0 +1,105 @@
+.body-container {
+  background-color: rgb(242,242,242);
+
+  .component-h1 {
+   font-size: 30px;
+   padding-left: 20px;
+   padding-top: 20px;
+  }
+
+  .match-status-info {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 16px;
+    top: 70px;
+    gap: 8px;
+    font-size: 16px;
+
+    .playtime-info {
+      border-top: 4px solid green;
+      width: 80px;
+    }
+
+    .break-info {
+      border-top: 4px solid orange;
+      width: 80px;
+    }
+
+    .end-info {
+      border-top: 4px solid red;
+      width: 80px;
+    }
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 2fr));
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+
+    .game-card {
+      background-color: rgb(255,255,255);
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}
+
+.button-container {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.green-timer {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  height: 14px;
+  width: 14px;
+  background-color: green;
+  border-radius: 100%;
+  animation: timer-puls 1.4s infinite;
+}
+
+.orange-timer {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  height: 14px;
+  width: 14px;
+  background-color: orange;
+  border-radius: 100%;
+}
+
+.red-timer {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  height: 14px;
+  width: 14px;
+  background-color: red;
+  border-radius: 100%;
+}
+
+mat-card-title {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@keyframes timer-puls {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,111 @@
+mat-toolbar {
+  gap: 20px;
+}
+
+.no-current-games-card-container {
+  display: flex;
+  justify-content: center;
+
+  .no-current-games-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    font-size: 16px;
+  }
+}
+
+.table-container {
+  margin-top: 15vh;
+}
+
+.even-row {
+  background-color: #f9f9f9;
+}
+
+.odd-row {
+  background-color: #ffffff;
+}
+
+h1 {
+  margin-left: 16px;
+}
+
+.relegation-row {
+  background-color: #f9bdbd;
+}
+
+.descent-row {
+  background-color: #f59292;
+}
+
+.rise-row {
+  background-color: rgba(150, 255, 138, 0.828);
+}
+
+.relegation-up {
+  background-color: rgba(201, 253, 195, 0.828);
+}
+
+.body-container {
+  background-color: rgb(242,242,242);
+  padding-top: 20px;
+
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 2fr));
+    gap: 20px;
+    min-height: 100vh;
+
+    .game-card {
+      background-color: rgb(255,255,255);
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}
+
+mat-card-content {
+  margin-left: 16px;
+
+  .odds-container {
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+  }
+
+  .game-information {
+    margin-top: 20px;
+  }
+}
+
+.component-h1 {
+  font-size: 30px;
+  padding-left: 20px;
+ }
+
+ .match-status-info {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 16px;
+  top: 70px;
+  gap: 8px;
+  font-size: 16px;
+
+  .playtime-info {
+    border-top: 4px solid green;
+    width: 80px;
+  }
+
+  .break-info {
+    border-top: 4px solid orange;
+    width: 80px;
+  }
+
+  .end-info {
+    border-top: 4px solid red;
+    width: 80px;
+  }
+}
