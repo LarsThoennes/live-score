@@ -91,8 +91,15 @@
 </div>
 
 <div id="table2Bundesliga" class="table-container">
-  <h1 class="component-h1">Tabel</h1>
-
+  <div class="table-head">
+    <h1 class="component-h1">Tabel</h1>
+  <div class="table-info">
+   <div class="rise-info">Rise</div>
+   <div class="rel-up-info">Relegation up</div>
+   <div class="rel-down-info">Relegation down</div>
+   <div class="des-info">Descent</div>
+ </div>
+  </div>
   <table mat-table  [dataSource]="bundesligaSecondTable"   class="mat-elevation-z8 bundesliga-table">
 
    <ng-container matColumnDef="demo-Rank">

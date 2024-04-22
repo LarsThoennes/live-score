@@ -18,7 +18,42 @@ mat-toolbar {
 
 .table-container {
   margin-top: 15vh;
-}
+
+  .table-head {
+    display: flex;
+    justify-content: space-between;
+
+    .table-info {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      right: 16px;
+      top: 1700px;
+      gap: 40px;
+      font-size: 16px;
+
+      .rise-info {
+        border-top: 4px solid rgba(150, 255, 138, 0.828);
+        width: 160px;
+      }
+
+      .rel-up-info {
+        border-top: 4px solid rgba(201, 253, 195, 0.828);
+        width: 160px;
+      }
+
+      .rel-down-info {
+        border-top: 4px solid #f9bdbd;
+        width: 160px;
+      }
+
+      .des-info {
+        border-top: 4px solid #f59292;
+        width: 160px;
+      }
+    }
+  }
+  }
 
 .even-row {
   background-color: #f9f9f9;

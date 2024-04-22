@@ -25,7 +25,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { BundesligaComponent } from './bundesliga/bundesliga.component';
 import { BundesligaSecondComponent } from './bundesliga-second/bundesliga-second.component';
 import { BundesligaThirdComponent } from './bundesliga-third/bundesliga-third.component';
-import { MatToolbarComponent } from './mat-toolbar/mat-toolbar.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +34,6 @@ import { MatToolbarComponent } from './mat-toolbar/mat-toolbar.component';
     BundesligaComponent,
     BundesligaSecondComponent,
     BundesligaThirdComponent,
-    MatToolbarComponent,
   ],
   imports: [
     BrowserModule,

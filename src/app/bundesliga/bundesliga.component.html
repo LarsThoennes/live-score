@@ -1,4 +1,24 @@
-<app-mat-toolbar></app-mat-toolbar>
+<mat-toolbar>
+  <button (click)="scrollTo('liveGames1Bundesliga')" mat-raised-button
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    Live Games
+</button>
+<button (click)="scrollTo('NextGames1Bundesliga')" mat-raised-button
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    Next Games
+</button>
+<button (click)="scrollTo('table1Bundesliga')" mat-raised-button
+    aria-label="Button that displays a tooltip when focused or hovered over">
+    Table
+</button>
+
+<div class="match-status-info">
+  <div class="playtime-info">playtime</div>
+  <div class="break-info">break</div>
+  <div class="end-info">end</div>
+</div>
+</mat-toolbar>
+
 
 <div id="liveGames1Bundesliga" class="body-container">
   <h1 class="component-h1">Live games</h1>
@@ -73,8 +93,16 @@
 </div>
 
 <div id="table1Bundesliga" class="table-container">
- <h1 class="component-h1">Tabel</h1>
-
+ <div class="table-head">
+  <h1 class="component-h1">Tabel</h1>
+ <div class="table-info">
+  <div class="cl-info">Champions League</div>
+  <div class="el-info">Europa League</div>
+  <div class="conl-info">Conferece League</div>
+  <div class="rel-info">Relegation</div>
+  <div class="des-info">Descent</div>
+</div>
+ </div>
  <table mat-table  [dataSource]="BundesligaTable"   class="mat-elevation-z8 bundesliga-table">
 
   <ng-container matColumnDef="demo-Rank">

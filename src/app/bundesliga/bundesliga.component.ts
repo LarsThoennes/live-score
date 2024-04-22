@@ -16,7 +16,13 @@ export class BundesligaComponent implements OnInit {
 
   constructor(private footballDataService: FootballDataService, private el: ElementRef) { }
 
-
+  scrollTo(id: string) {
+    const element = this.el.nativeElement.querySelector('#' + id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    return false;
+  }
 
   ngOnInit(): void {
     this.fetchBundesligaTable();
